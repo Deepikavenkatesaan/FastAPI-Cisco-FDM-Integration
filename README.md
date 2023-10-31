@@ -6,9 +6,11 @@ This FastAPI application provides a set of endpoints to interact with the Cisco 
 
 ## Example Usage
 To get started, make sure you have the required dependencies installed. You can do this by running:
+
 --->pip install fastapi requests uvicorn
 
 Next, you can start the FastAPI server:
+
 -->uvicorn main:app --reload
 
 ## Endpoints
@@ -299,81 +301,123 @@ update_nat_rule(parent_id: str, object_id: str, nat_rule_data: dict, token: str 
 ## Examples
 
 Example 1: Retrieving Authentication Token:
+
 token = get_token()
+
 print(f"Authentication Token: {token}")
 
 
 Example 2: Creating a Network Object:
+
 network_data = {
+
     "name": "Office_Network",
+    
     "subnet": "192.168.1.0/24"
+    
 }
 
 response = create_network_object(network_data)
+
 print(f"Created Network Object: {response}")
 
 
 Example 3: Deleting a Network Object:
+
 object_id = "network_object_id_here"
+
 response = delete_network_object(object_id)
+
 print(response)
 
 
 Example 4: Updating a Network Object:
+
 object_id = "network_object_id_here"
+
 network_object_data = {
+
     "name": "Updated_Office_Network",
+    
     "subnet": "192.168.1.0/24"
+    
 }
 
 response = update_network_object(object_id, network_object_data)
+
 print(f"Updated Network Object: {response}")
 
 
 Example 5: Retrieving a List of Access Policies:
+
 access_policies = get_access_policies()
+
 print(f"Access Policies: {access_policies}")
 
 
 Example 6: Retrieving Access Rules for a Specific Policy:
+
 policy_id = "policy_id_here"
+
 access_rules = get_access_rules(policy_id)
+
 print(f"Access Rules for Policy {policy_id}: {access_rules}")
 
 
 Example 7: Creating an Access Rule
+
 policy_id = "policy_id_here"
+
 access_rule_data = {
+
     "name": "Allow_HTTP",
+    
     "sourceNetworks": ["192.168.1.0/24"],
+    
     "destinationNetworks": ["0.0.0.0/0"],
+    
     "services": ["HTTP"],
+    
     "action": "ALLOW"
 }
 
 response = create_access_rule(policy_id, access_rule_data)
+
 print(f"Created Access Rule: {response}")
 
 
 Example 8: Deleting an Access Rule:
+
 policy_id = "policy_id_here"
+
 object_id = "access_rule_id_here"
+
 response = delete_access_rule(policy_id, object_id)
+
 print(response)
 
 
 Example 9: Updating an Access Rule:
+
 parent_id = "policy_id_here"
+
 object_id = "access_rule_id_here"
+
 access_rule_data = {
+
     "name": "Updated_HTTP_Rule",
+    
     "sourceNetworks": ["192.168.1.0/24"],
+    
     "destinationNetworks": ["0.0.0.0/0"],
+    
     "services": ["HTTP"],
+    
     "action": "ALLOW"
 }
 
 response = update_access_rule(parent_id, object_id, access_rule_data)
+
 print(f"Updated Access Rule: {response}")
 
 
