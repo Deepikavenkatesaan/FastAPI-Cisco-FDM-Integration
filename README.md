@@ -175,126 +175,126 @@ create_access_rule(policy_id: str, access_rule_data: dict, token: str = Depends(
 ### Description: Creates a new access rule for a specific policy.
 ### Arguments:
 ### - policy_id (str): ID of the access policy.
-# - access_rule_data (dict): JSON containing access rule data.
-# - token (str): Authentication token obtained from FDM API.
+### - access_rule_data (dict): JSON containing access rule data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for deleting an access rule
+### Function Signature for deleting an access rule
 delete_access_rule(policy_id: str, object_id: str, token: str = Depends(get_token)) -> dict
-# Description: Deletes an access rule by its ID.
-# Arguments:
-# - policy_id (str): ID of the access policy.
-# - object_id (str): ID of the access rule to be deleted.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Deletes an access rule by its ID.
+### Arguments:
+### - policy_id (str): ID of the access policy.
+### - object_id (str): ID of the access rule to be deleted.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for updating an access rule
+### Function Signature for updating an access rule
 update_access_rule(parent_id: str, object_id: str, access_rule_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Updates an access rule by its ID.
-# Arguments:
-# - parent_id (str): ID of the access policy.
-# - object_id (str): ID of the access rule to be updated.
-# - access_rule_data (dict): JSON containing updated access rule data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Updates an access rule by its ID.
+### Arguments:
+### - parent_id (str): ID of the access policy.
+### - object_id (str): ID of the access rule to be updated.
+### - access_rule_data (dict): JSON containing updated access rule data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for retrieving a list of port objects
+### Function Signature for retrieving a list of port objects
 get_port_objects(limit: int, token: str = Depends(get_token)) -> dict
-# Description: Retrieves a list of port objects. You can specify a limit.
-# Arguments:
-# - limit (int): Maximum number of port objects to retrieve.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Retrieves a list of port objects. You can specify a limit.
+### Arguments:
+### - limit (int): Maximum number of port objects to retrieve.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for creating a port object
+### Function Signature for creating a port object
 create_port_object(port_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Creates a new port object.
-# Arguments:
-# - port_data (dict): JSON containing port object data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Creates a new port object.
+### Arguments:
+### - port_data (dict): JSON containing port object data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for deleting a port object
+### Function Signature for deleting a port object
 delete_port_object(port_id: str, token: str = Depends(get_token)) -> dict
-# Description: Deletes a port object by its ID.
-# Arguments:
-# - port_id (str): ID of the port object to be deleted.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Deletes a port object by its ID.
+### Arguments:
+### - port_id (str): ID of the port object to be deleted.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for updating a port object
+### Function Signature for updating a port object
 update_port_object(port_id: str,  port_object_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Updates a port object by its ID.
-# Arguments:
-# - port_id (str): ID of the port object to be updated.
-# - port_object_data (dict): JSON containing updated port object data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Updates a port object by its ID.
+### Arguments:
+### - port_id (str): ID of the port object to be updated.
+### - port_object_data (dict): JSON containing updated port object data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for retrieving the ID of auto NAT rules
+### Function Signature for retrieving the ID of auto NAT rules
 get_nat_objectid(token: str = Depends(get_token)) -> str
-# Description: Retrieves the ID of auto NAT rules.
+### Description: Retrieves the ID of auto NAT rules.
 
-# Function Signature for retrieving auto NAT rules
+### Function Signature for retrieving auto NAT rules
 get_nat_rules(parent_id: str, token: str = Depends(get_token)) -> dict
-# Description: Retrieves auto NAT rules for a specific policy by its ID.
-# Arguments:
-# - parent_id (str): ID of the auto NAT policy.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Retrieves auto NAT rules for a specific policy by its ID.
+### Arguments:
+### - parent_id (str): ID of the auto NAT policy.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for creating an auto NAT rule
+### Function Signature for creating an auto NAT rule
 create_nat_rule(parent_id: str, nat_rule_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Creates a new auto NAT rule.
-# Arguments:
-# - parent_id (str): ID of the auto NAT policy.
-# - nat_rule_data (dict): JSON containing auto NAT rule data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Creates a new auto NAT rule.
+### Arguments:
+### - parent_id (str): ID of the auto NAT policy.
+### - nat_rule_data (dict): JSON containing auto NAT rule data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for deleting an auto NAT rule
+### Function Signature for deleting an auto NAT rule
 delete_nat_rule(parent_id: str, object_id: str, token: str = Depends(get_token)) -> dict
-# Description: Deletes an auto NAT rule by its ID.
-# Arguments:
-# - parent_id (str): ID of the auto NAT policy.
-# - object_id (str): ID of the auto NAT rule to be deleted.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Deletes an auto NAT rule by its ID.
+### Arguments:
+###- parent_id (str): ID of the auto NAT policy.
+### - object_id (str): ID of the auto NAT rule to be deleted.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for updating an auto NAT rule
+### Function Signature for updating an auto NAT rule
 update_nat_rule(parent_id: str, object_id: str, nat_rule_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Updates an auto NAT rule by its ID.
-# Arguments:
-# - parent_id (str): ID of the auto NAT policy.
-# - object_id (str): ID of the auto NAT rule to be updated.
-# - nat_rule_data (dict): JSON containing updated auto NAT rule data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Updates an auto NAT rule by its ID.
+### Arguments:
+### - parent_id (str): ID of the auto NAT policy.
+###- object_id (str): ID of the auto NAT rule to be updated.
+### - nat_rule_data (dict): JSON containing updated auto NAT rule data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for retrieving the ID of manual NAT rules
+### Function Signature for retrieving the ID of manual NAT rules
 get_nat_objectid(token: str = Depends(get_token)) -> str
-# Description: Retrieves the ID of manual NAT rules.
+### Description: Retrieves the ID of manual NAT rules.
 
-# Function Signature for retrieving manual NAT rules
+### Function Signature for retrieving manual NAT rules
 get_nat_rules(parent_id: str, token: str = Depends(get_token)) -> dict
-# Description: Retrieves manual NAT rules for a specific policy by its ID.
-# Arguments:
-# - parent_id (str): ID of the manual NAT policy.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Retrieves manual NAT rules for a specific policy by its ID.
+### Arguments:
+### - parent_id (str): ID of the manual NAT policy.
+###- token (str): Authentication token obtained from FDM API.
 
-# Function Signature for creating a manual NAT rule
+### Function Signature for creating a manual NAT rule
 create_nat_rule(parent_id: str, nat_rule_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Creates a new manual NAT rule.
-# Arguments:
-# - parent_id (str): ID of the manual NAT policy.
-# - nat_rule_data (dict): JSON containing manual NAT rule data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Creates a new manual NAT rule.
+### Arguments:
+### - parent_id (str): ID of the manual NAT policy.
+### - nat_rule_data (dict): JSON containing manual NAT rule data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for deleting a manual NAT rule
+### Function Signature for deleting a manual NAT rule
 delete_nat_rule(parent_id: str, object_id: str, token: str = Depends(get_token)) -> dict
-# Description: Deletes a manual NAT rule by its ID.
-# Arguments:
-# - parent_id (str): ID of the manual NAT policy.
-# - object_id (str): ID of the manual NAT rule to be deleted.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Deletes a manual NAT rule by its ID.
+### Arguments:
+### - parent_id (str): ID of the manual NAT policy.
+### - object_id (str): ID of the manual NAT rule to be deleted.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for updating a manual NAT rule
+### Function Signature for updating a manual NAT rule
 update_nat_rule(parent_id: str, object_id: str, nat_rule_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Updates a manual NAT rule by its ID.
-# Arguments:
-# - parent_id (str): ID of the manual NAT policy.
-# - object_id (str): ID of the manual NAT rule to be updated.
-# - nat_rule_data (dict): JSON containing updated manual NAT rule data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Updates a manual NAT rule by its ID.
+### Arguments:
+### - parent_id (str): ID of the manual NAT policy.
+### - object_id (str): ID of the manual NAT rule to be updated.
+### - nat_rule_data (dict): JSON containing updated manual NAT rule data.
+### - token (str): Authentication token obtained from FDM API.
 
 ## Examples
 
