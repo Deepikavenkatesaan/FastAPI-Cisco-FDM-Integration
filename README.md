@@ -132,8 +132,11 @@ Description: Update a manual NAT rule by its ID.
 Request Body: JSON containing updated manual NAT rule data.
 
 ### Function Signature for retrieving authentication token
+
 get_token(token: str = Depends(get_Token)) -> str
+
 ### Description: Retrieves the authentication token from the FDM API.
+
 
 ### Function Signature for retrieving a list of network objects
 get_network(token: str = Depends(get_token)) -> dict
@@ -300,14 +303,14 @@ update_nat_rule(parent_id: str, object_id: str, nat_rule_data: dict, token: str 
 
 ## Examples
 
-Example 1: Retrieving Authentication Token:
+### Example 1: Retrieving Authentication Token:
 
 token = get_token()
 
 print(f"Authentication Token: {token}")
 
 
-Example 2: Creating a Network Object:
+### Example 2: Creating a Network Object:
 
 network_data = {
 
@@ -322,7 +325,7 @@ response = create_network_object(network_data)
 print(f"Created Network Object: {response}")
 
 
-Example 3: Deleting a Network Object:
+### Example 3: Deleting a Network Object:
 
 object_id = "network_object_id_here"
 
@@ -331,7 +334,7 @@ response = delete_network_object(object_id)
 print(response)
 
 
-Example 4: Updating a Network Object:
+### Example 4: Updating a Network Object:
 
 object_id = "network_object_id_here"
 
@@ -348,7 +351,7 @@ response = update_network_object(object_id, network_object_data)
 print(f"Updated Network Object: {response}")
 
 
-Example 5: Retrieving a List of Access Policies:
+### Example 5: Retrieving a List of Access Policies:
 
 access_policies = get_access_policies()
 
@@ -364,7 +367,7 @@ access_rules = get_access_rules(policy_id)
 print(f"Access Rules for Policy {policy_id}: {access_rules}")
 
 
-Example 7: Creating an Access Rule
+### Example 7: Creating an Access Rule
 
 policy_id = "policy_id_here"
 
@@ -386,7 +389,7 @@ response = create_access_rule(policy_id, access_rule_data)
 print(f"Created Access Rule: {response}")
 
 
-Example 8: Deleting an Access Rule:
+### Example 8: Deleting an Access Rule:
 
 policy_id = "policy_id_here"
 
@@ -397,7 +400,7 @@ response = delete_access_rule(policy_id, object_id)
 print(response)
 
 
-Example 9: Updating an Access Rule:
+### Example 9: Updating an Access Rule:
 
 parent_id = "policy_id_here"
 
