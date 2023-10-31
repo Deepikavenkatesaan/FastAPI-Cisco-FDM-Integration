@@ -13,7 +13,7 @@ Next, you can start the FastAPI server:
 
 ## Endpoints
 
-## 1. Network Objects
+### 1. Network Objects
 
 GET /network_objects
 
@@ -35,7 +35,7 @@ Description: Update a network object by its ID.
 
 Request Body: JSON containing updated network object data.
 
-## 2. Access Policy
+### 2. Access Policy
 
 GET /access_policies
 
@@ -61,7 +61,7 @@ Description: Update an access rule by its ID.
 
 Request Body: JSON containing updated access rule data.
 
-## 3. Port Objects
+### 3. Port Objects
 
 GET /get_port_objects/{limit}
 
@@ -85,7 +85,7 @@ Request Body: JSON containing updated port object data.
 
 ### 4. NAT Rules
 
-## Auto NAT Rules
+### Auto NAT Rules
 
 GET /nat_auto_rules
 
@@ -107,7 +107,7 @@ Description: Update an auto NAT rule by its ID.
 
 Request Body: JSON containing updated auto NAT rule data.
 
-## Manual NAT Rules
+### Manual NAT Rules
 
 GET /nat_manual_rules
 
@@ -129,52 +129,52 @@ Description: Update a manual NAT rule by its ID.
 
 Request Body: JSON containing updated manual NAT rule data.
 
-## Function Signature for retrieving authentication token
+### Function Signature for retrieving authentication token
 get_token(token: str = Depends(get_Token)) -> str
-# Description: Retrieves the authentication token from the FDM API.
+### Description: Retrieves the authentication token from the FDM API.
 
-# Function Signature for retrieving a list of network objects
+### Function Signature for retrieving a list of network objects
 get_network(token: str = Depends(get_token)) -> dict
-# Description: Retrieves a list of network objects.
+### Description: Retrieves a list of network objects.
 
-# Function Signature for creating a network object
+### Function Signature for creating a network object
 create_network_object(network_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Creates a new network object.
-# Arguments:
-# - network_data (dict): JSON containing network object data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Creates a new network object.
+### Arguments:
+### - network_data (dict): JSON containing network object data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for deleting a network object
+### Function Signature for deleting a network object
 delete_network_object(object_id: str, token: str = Depends(get_token)) -> dict
-# Description: Deletes a network object by its ID.
-# Arguments:
-# - object_id (str): ID of the network object to be deleted.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Deletes a network object by its ID.
+### Arguments:
+### - object_id (str): ID of the network object to be deleted.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for updating a network object
+### Function Signature for updating a network object
 update_network_object(object_id: str, network_object_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Updates a network object by its ID.
-# Arguments:
-# - object_id (str): ID of the network object to be updated.
-# - network_object_data (dict): JSON containing updated network object data.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Updates a network object by its ID.
+### Arguments:
+### - object_id (str): ID of the network object to be updated.
+### - network_object_data (dict): JSON containing updated network object data.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for retrieving a list of access policies
+### Function Signature for retrieving a list of access policies
 get_access_policies(token: str = Depends(get_token)) -> str
-# Description: Retrieves a list of access policies.
+### Description: Retrieves a list of access policies.
 
-# Function Signature for retrieving access rules for a specific policy
+### Function Signature for retrieving access rules for a specific policy
 get_access_rules(policy_id: str, token: str = Depends(get_token)) -> dict
-# Description: Retrieves access rules for a specific policy by its ID.
-# Arguments:
-# - policy_id (str): ID of the access policy.
-# - token (str): Authentication token obtained from FDM API.
+### Description: Retrieves access rules for a specific policy by its ID.
+### Arguments:
+### - policy_id (str): ID of the access policy.
+### - token (str): Authentication token obtained from FDM API.
 
-# Function Signature for creating an access rule
+### Function Signature for creating an access rule
 create_access_rule(policy_id: str, access_rule_data: dict, token: str = Depends(get_token)) -> dict
-# Description: Creates a new access rule for a specific policy.
-# Arguments:
-# - policy_id (str): ID of the access policy.
+### Description: Creates a new access rule for a specific policy.
+### Arguments:
+### - policy_id (str): ID of the access policy.
 # - access_rule_data (dict): JSON containing access rule data.
 # - token (str): Authentication token obtained from FDM API.
 
