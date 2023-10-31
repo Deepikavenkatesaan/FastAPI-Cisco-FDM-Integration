@@ -138,7 +138,7 @@ get_token(token: str = Depends(get_Token)) -> str
 ### Description: Retrieves the authentication token from the FDM API.
 
 
-### Function Signature for retrieving a list of network objects
+## Function Signature for retrieving a list of network objects
 get_network(token: str = Depends(get_token)) -> dict
 ### Description: Retrieves a list of network objects.
 
