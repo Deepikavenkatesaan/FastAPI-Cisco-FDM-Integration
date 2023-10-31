@@ -83,7 +83,7 @@ Description: Update a port object by its ID.
 
 Request Body: JSON containing updated port object data.
 
-## 4. NAT Rules
+### 4. NAT Rules
 
 ## Auto NAT Rules
 
@@ -129,7 +129,7 @@ Description: Update a manual NAT rule by its ID.
 
 Request Body: JSON containing updated manual NAT rule data.
 
-# Function Signature for retrieving authentication token
+## Function Signature for retrieving authentication token
 get_token(token: str = Depends(get_Token)) -> str
 # Description: Retrieves the authentication token from the FDM API.
 
